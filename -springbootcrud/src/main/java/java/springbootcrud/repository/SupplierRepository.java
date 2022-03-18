@@ -6,5 +6,7 @@ import java.springbootcrud.model.*;
 
 @Repository
 public interface SupplierRepository extends JpaRepository<Supplier,Long>{
-
+       
+	Supplier findBycompanyName(String companyName);
+	Supplier findByvatNumber(String vatNumber);
 }

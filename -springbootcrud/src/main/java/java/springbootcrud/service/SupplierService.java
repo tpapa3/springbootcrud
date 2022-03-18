@@ -60,4 +60,14 @@ public class SupplierService {
 		 String message = "the data is deleted";
 		 return ResponseEntity.status(200).body(message);
 	}
+	
+	public Supplier findByCompanyName(String companyName){
+		return suprepository.findBycompanyName(companyName);
+	}
+	
+	public Supplier findByVatNumber(String vatNumber){
+		return suprepository.findByvatNumber(vatNumber);
+	}
+	
+	
 }

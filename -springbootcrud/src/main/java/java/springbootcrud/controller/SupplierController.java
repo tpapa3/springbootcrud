@@ -45,5 +45,15 @@ public class SupplierController {
 		return supservice.deleteSupplier(id);
 	}
 	
+	@RequestMapping(value="/findCompanyName/{companyName}",method=RequestMethod.GET)
+	public Supplier findByCompanyName(@PathVariable String companyName) {
+		return supservice.findByCompanyName(companyName);
+	}
+	
+	@RequestMapping(value="/findVatNumber/{vatNumber}",method=RequestMethod.GET)
+	public Supplier findByVatNumber(@PathVariable String vatNumber) {
+		return supservice.findByVatNumber(vatNumber);
+	}
+	
 	
 }
